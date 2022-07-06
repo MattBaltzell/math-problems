@@ -1,4 +1,13 @@
 const container= document.querySelector('.quiz')
+const submitBtn = document.getElementById('submit-btn')
+
+submitBtn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    // store all user answers to question objects
+    // regenerate html with answers as text instead of input elements
+    // indicate if user answered correctly
+    // -- if not, show correct answer beside incorrect answer
+})
 
 class MathQuiz{
     constructor(numProblems, operations, maxNumber=100, minNumber=0){
@@ -79,3 +88,6 @@ class MathProblem{
     }
 
 }
+
+const quiz1 = MathQuiz.create(10)
+quiz1.generateHTML()

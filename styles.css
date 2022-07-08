@@ -14,13 +14,24 @@ body {
     background-color: rgb(127, 116, 179);
 }
 
-form{
-    margin-top: 1rem;
+.wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.4rem;
-    width: 100%;
+    align-items: flex-start;
+    padding: 3rem 20%;
+}
+
+h1{
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 input {
@@ -34,7 +45,8 @@ input {
    color: rgb(92, 76, 182);
 }
 
-button{
+.btn{
+    display: inline-block;
     padding: 1rem 2rem;
     font-size: 1.8rem;
     border-radius: 4px;
@@ -43,23 +55,24 @@ button{
     color: rgb(66, 60, 100);
     transition: all .2s;
     box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    text-decoration: none;
 }
 
-button:hover {
+.btn:hover {
     background-color: rgb(135, 255, 219);
     box-shadow: 0 2px 4px rgba(0,0,0,.3);
     transform: translateY(2px);
 }
 
 .container{
-    padding: 4rem 20%;
-    width: 100vw;
-    min-height: 100vh;
+    padding: 4rem 0;
+    width: 100%;
+    height: 100%;
 }
 
 .quiz{
     display: grid;
-    gap: 4rem;
+    gap: 3rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3,max-content);
     margin-bottom: 2rem;
@@ -71,19 +84,21 @@ button:hover {
     align-items: center;
     background-color: rgb(230, 226, 247);
     color: rgb(66, 60, 100);
-    padding: 2rem;
+    padding: 2rem 3.4rem;
     max-height: 100%;
     font-size: 5.2rem;
     line-height: 1;
     border-radius: 8px;
+    width: 100%;
 }
 
 .question{
- max-width: 16rem;
- text-align: right;
- padding-bottom: 1.4rem;
- margin-bottom: 1.4rem;
- border-bottom: 1px solid rgb(66, 60, 100);
+    max-width: 16rem;
+    text-align: right;
+    padding-bottom: 1.4rem;
+    margin-bottom: 1.4rem;
+    border-bottom: 1px solid rgb(66, 60, 100);
+    width: 100%; 
 }
 
 .answer{
@@ -91,4 +106,31 @@ button:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.user_answer{
+    align-self:flex-end;
+    text-align: right;
+    width: 100%;
+}
+
+
+.correct {
+    border: 6px solid rgb(75, 218, 175);
+}
+
+.incorrect {
+    border: 6px solid rgb(253, 95, 95);
+}
+
+.correct .user_answer{
+    color: rgb(21, 196, 143);
+}
+
+.incorrect .user_answer{
+    color: rgb(243, 67, 67);
+}
+
+.hidden {
+    display:none;
 }
